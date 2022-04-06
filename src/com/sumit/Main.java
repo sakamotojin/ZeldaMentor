@@ -2,6 +2,7 @@ package com.sumit;
 
 
 import com.sumit.BinarySearch.InsertionIndex;
+import com.sumit.Recursion.GeneratingPermutations;
 import com.sumit.Recursion.GeneratingSubsets;
 
 public class Main {
@@ -15,17 +16,11 @@ public class Main {
         //Binary Search Problem 2
         System.out.println("here");
 
-        GeneratingSubsets.run();
+        //GeneratingSubsets.run();
+
+        GeneratingPermutations.run();
 
 
     }
-
-
-    public static boolean f(int a){
-               return true;
-    }
-
-
-
 
 }

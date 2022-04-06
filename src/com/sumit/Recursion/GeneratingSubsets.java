@@ -1,5 +1,8 @@
 package com.sumit.Recursion;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class GeneratingSubsets {
     /*
     X = { 1, 2, 3} , 8 =  2*2*2
@@ -14,26 +17,31 @@ public class GeneratingSubsets {
         AAAAA
         AAAAA
 
+        1 = 0000001
+        2 = 0000010
     */
     private static int cnt = 0 ;
+    private static  int inputArr[] = {1 , 2 , 3 , 4, 5 , 6};
+
+    //Initially No Element Is Taken
+    private static boolean taken[] = {false,false,false,false,false,false};
 
     public static void run(){
-        int arr[] = {1 , 2 , 3 , 4, 5 , 6};
-        int temp[] = new int[0];
-        generateSubsets(0 , arr,temp);
+        generateSubsets(0 ,new int[0]);
+
+        //generateSubsets(0);
         System.out.println(cnt);
 
     }
 
-    static void generateSubsets(int idx , int inputArr[], int sub[]){
+
+    // Approach 1
+    static void generateSubsets(int idx , int sub[]){
 
         int m = inputArr.length;
         if(idx == m) {
             cnt = cnt + 1;
-            for(int i : sub){
-                System.out.print(i + " ");
-            }
-            System.out.println();
+            System.out.println(Arrays.toString(sub));
             return;
         }
 
@@ -43,8 +51,27 @@ public class GeneratingSubsets {
         for(int i = 0 ; i < n; i++) temp[i] = sub[i];
 
         temp[n] = inputArr[idx];  // temp[0] = inp[0]
-        generateSubsets(idx + 1 , inputArr ,sub);
-        generateSubsets(idx + 1, inputArr , temp);
-
+        generateSubsets(idx + 1 ,sub);
+        generateSubsets(idx + 1, temp);
     }
+
+    // Approach 2
+    static void generateSubsets(int idx){
+        if(idx == inputArr.length) {
+            cnt = cnt +1;
+            System.out.print(" [ ");
+            for(int i = 0 ; i < idx; i++){
+                if(taken[i]) System.out.print(inputArr[i] + " ,");
+            }
+            System.out.println(" ] ");
+            return;
+        }
+        taken[idx] = true;
+        generateSubsets(idx +1);
+        taken[idx] = false;
+        generateSubsets(idx + 1);
+    }
+
+
+
 }

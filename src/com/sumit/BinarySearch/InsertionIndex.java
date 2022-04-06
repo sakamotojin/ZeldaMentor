@@ -14,7 +14,7 @@ If target already exists in nums, return the largest index where target can be i
 
 public class InsertionIndex {
 
-    public static void solve(){
+    public static void run(){
         System.out.println("test");
     }
 
