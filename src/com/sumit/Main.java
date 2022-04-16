@@ -2,6 +2,7 @@ package com.sumit;
 
 
 import com.sumit.BinarySearch.InsertionIndex;
+import com.sumit.LoveBabbar.Union2Arrays;
 import com.sumit.Recursion.GeneratingPermutations;
 import com.sumit.Recursion.GeneratingSubsets;
 
@@ -18,7 +19,9 @@ public class Main {
 
         //GeneratingSubsets.run();
 
-        GeneratingPermutations.run();
+        //GeneratingPermutations.run();
+
+        Union2Arrays.testSet();
 
 
     }

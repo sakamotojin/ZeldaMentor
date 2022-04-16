@@ -1,0 +1,1 @@
+![Alt text](../../../../resources/java-collection-hierarchy.png "Java Collection Diagram")
