@@ -2,14 +2,20 @@ package com.sumit;
 
 
 import com.sumit.BinarySearch.InsertionIndex;
+import com.sumit.Collections.SetUsage;
 import com.sumit.LoveBabbar.Union2Arrays;
 import com.sumit.Recursion.GeneratingPermutations;
 import com.sumit.Recursion.GeneratingSubsets;
+import com.sumit.interfaces.AnalogWatch;
+import com.sumit.interfaces.DigitalWatch;
+import com.sumit.interfaces.User;
+import com.sumit.interfaces.Watch;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        /*
         //Binary Search Problem 1
         //InsertionIndex.bruteForce();
         //InsertionIndex.optimized();
@@ -22,6 +28,9 @@ public class Main {
         //GeneratingPermutations.run();
 
         Union2Arrays.testSet();
+         */
+
+        SetUsage.solve1();
 
 
     }
