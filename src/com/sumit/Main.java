@@ -14,25 +14,25 @@ import com.sumit.interfaces.Watch;
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("Main Starting ");
 
-        /*
-        //Binary Search Problem 1
-        //InsertionIndex.bruteForce();
-        //InsertionIndex.optimized();
+    }
 
-        //Binary Search Problem 2
-        System.out.println("here");
+    public static void testRecursion(){
+        GeneratingSubsets.run();
+        GeneratingPermutations.run();
+    }
 
-        //GeneratingSubsets.run();
+    public static void testInterface(){
+        User userOne = new User(new DigitalWatch());
+        User userTwo = new User(new AnalogWatch());
+        userOne.run();
+        userTwo.run();
+    }
 
-        //GeneratingPermutations.run();
-
-        Union2Arrays.testSet();
-         */
-
+    public static void testSet(){
+        SetUsage.solve();
         SetUsage.solve1();
-
-
     }
 
 }
